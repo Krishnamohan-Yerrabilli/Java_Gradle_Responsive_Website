@@ -1,0 +1,299 @@
+/* Global styles */
+
+
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+
+
+/* Typography */
+
+
+header{
+    background: #f8f8f8;
+    text-align: center;
+    padding:2rem;
+    /* border: darkorange solid; */
+ 
+}
+
+h1{
+    font-family:lora;
+    font-weight: 400;
+    font-size: 2rem;
+    color:#143774;
+}
+
+.main-heading,h1,p{
+    margin:0;    
+    padding:0;
+}
+
+.sub-title{
+    color:#1792D2;
+    font-family: sans-serif;
+    font-size: .705rem;
+    font-weight: 800;
+}
+
+/* Article-container-Typography */
+
+.main-container{
+    margin-bottom: 2.5rem;
+    border-bottom: solid 1px;
+}
+
+
+h1,h2,h3,h4{
+    font-family: sans;
+    font-weight: 400;
+    color:#143774;
+}
+
+p{
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.article-status{
+    color:#000;
+    font-size: 0.825em;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.mainarticle-inlinelink{
+    color:#1792D2;   
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+.article-more-info{
+    font-weight: 600;
+    color:#1792D2;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.main-article-more-info{
+    margin-bottom: 2rem;
+}
+
+.recentarticle-title{
+    font-size: 24px;
+}
+
+.cmn-border{
+    border: solid 20px #EBEBEB;
+    padding:1em;
+    margin:0;
+    margin-bottom: 2rem;
+}
+
+
+.aboutme-title,.sidebar-recentpost-title{
+    margin:10px;
+    font-family: ubuntu;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.recentposts-bottommargin{
+    margin-bottom: 50px;
+}
+
+.sidebarmore-title{
+    margin: 0;
+    /* border: solid magenta 2px; */
+    margin-bottom: rem;
+
+}
+
+.sidebar-more-recentposts{
+    border-bottom: solid 1px;
+    padding-bottom: 1rem;
+}
+
+.sidebar-more-recentposts:last-child{
+    border-bottom: none;
+    padding:0;
+    margin-bottom: 10px;
+}
+
+.sidebar-more-recentposts .sidebar-img{
+    margin-bottom: 0;
+}
+
+.sidebar-more-recentposts{
+    margin-bottom: 2rem;
+}
+
+
+footer {
+    background-color:#143774;
+    padding:60px;
+    color: white;
+    text-align: center;
+}
+
+footer p{
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+
+/* ---------
+-->Layout<--
+------------*/
+
+.container{
+    width:90%;
+    max-width:928px;
+    margin:0 auto;
+    /* padding:0; */
+    /* border:magenta solid 2px; */
+    /* padding:1rem; */
+
+}
+
+.mainarticle-img,.recent-article-img,.sidebar-img{
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.sidebar-img{
+    margin-bottom:15px;
+}
+
+.aboutme-img{
+    margin: 0;
+}
+
+
+/* Navigation */
+
+
+nav ul{
+    /* border: greenyellow solid; */
+    list-style-type:none;
+    padding-left:0;
+}
+
+nav li{
+    /* border: hotpink solid; */
+    margin-bottom: 1.3rem;
+}
+
+nav a{
+    /* border: skyblue solid; */
+    text-decoration: none;
+    color:#707070;
+    font-family: 'ubuntu';
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 0.100rem;
+}
+
+nav a:hover{
+color:#1792D2;
+}
+
+.mainarticle-inlinelink:hover{
+    color:#707070;
+    /* font-weight: 400; */
+}
+
+.article-more-info:hover,.current-page:hover{
+    color:#707070;
+    border-bottom:solid 1px;
+}
+
+.main-border{
+    border:none;
+    padding:0;
+}
+
+.aboutme-maititle{
+margin-top: 0;
+font-size: 1.7rem;
+}
+
+
+.aboutme-secondry-title{
+    font-size: 1.5rem;
+}
+
+.aboutme-img{
+    width:100%;
+    height:320px;
+    object-fit: cover;
+    
+}
+ 
+
+/* Desktop */
+
+
+@media (min-width:650px) {
+  
+    .container,nav ul,.rec-section-part{
+        display:flex;
+        justify-content: space-between; 
+        /* border: darkorange solid; */
+    }
+
+    header{
+        text-align: left;
+        margin-bottom: 50px;
+    }
+    nav li{
+        margin-left:2rem;
+    }
+     
+    .main-rec-container,.main-article-aboutme{
+        width:70%;
+    }
+
+    .main-container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .mainarticle-title{
+        order:-1;
+        margin-bottom: 30px;
+    }
+    .article-status{
+        order:-2;
+        margin-bottom: 0;
+    }
+    .mainarticle-img{
+        order:-3;
+    }
+
+    .recent-primary-part{
+        width:28%;
+        margin-bottom: 20px;
+    }
+
+    .recent-secondary-part{
+        width:68%;
+    }
+
+    .recent-article-img{
+        max-width: 100%;
+        height: 260px;
+        object-fit:cover;
+        margin-bottom: 20px;
+    }
+    
+    aside{
+        width: 25%;
+    }
+
+}
+
