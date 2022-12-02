@@ -28,10 +28,10 @@ pipeline{
                     withCredentials([string(credentialsId: 'docker_nexus_pass', variable: 'docker_nexus_passwd')]) {
                                 
                                 sh '''
-                                docker build -t 34.93.115.30:8083/springapp:$v1.$BUILD_ID .
+                                docker build -t 34.93.115.30:8083/springapp:$BUILD_ID .
                                 docker login -u admin -p sonarqube 34.93.115.30:8083 
-                                docker push  34.93.115.30:8083/springapp:$v1.$BUILD_ID
-                                docker rmi 34.93.115.30:8083/springapp:$v1.$BUILD_ID
+                                docker push  34.93.115.30:8083/springapp:$BUILD_ID
+                                docker rmi 34.93.115.30:8083/springapp:$BUILD_ID
                             '''
                         }
                     }
