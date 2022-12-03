@@ -38,13 +38,16 @@ pipeline{
                 }
             }
         
-        stage('identifying mis-configurations in helm charts using datree plugin'){
+    /*    stage('identifying mis-configurations in helm charts using datree plugin'){
             steps{
                 script{
-                    sh 'helm datree test kubernetes/myapp/'
+
+                    withEnv(['DATREE_TOKEN=g5CTVRHaY99hka6adEkxfo']){
+                            sh 'helm datree test kubernetes/myapp/'
+                    }
             }
         }
-    }
+    } */
         
         }
        post {
