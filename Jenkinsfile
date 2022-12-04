@@ -59,7 +59,7 @@ pipeline{
                                  tar -czvf  myapp-${helmversion}.tgz myapp/
                                  curl -u admin:$docker_nexus_passwd http://34.93.115.30:8081/repository/hosting-helm/ --upload-file myapp-${helmversion}.tgz -v
                             '''
-                          }
+                          } 
                         }
                     }
                 }
