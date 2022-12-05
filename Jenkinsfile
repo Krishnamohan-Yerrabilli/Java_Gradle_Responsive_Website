@@ -29,7 +29,7 @@ pipeline{
                                 
                                 sh ''' 
                                 docker build -t 34.93.115.30:8083/springapp:$BUILD_ID .
-                                docker login -u admin --password-stdin sonarqube 34.93.115.30:8083 
+                                docker login -u admin -p sonarqube 34.93.115.30:8083 
                                 docker push  34.93.115.30:8083/springapp:$BUILD_ID
                                 docker rmi 34.93.115.30:8083/springapp:$BUILD_ID
                             '''
