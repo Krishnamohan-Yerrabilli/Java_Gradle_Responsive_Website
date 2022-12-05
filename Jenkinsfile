@@ -27,7 +27,7 @@ pipeline{
                 script{
                     withCredentials([string(credentialsId: 'docker_nexus_pass', variable: 'docker_nexus_passwd')]) {
                                 
-                                sh '''
+                                sh ''' 
                                 docker build -t 34.93.115.30:8083/springapp:$BUILD_ID .
                                 docker login -u admin -p sonarqube 34.93.115.30:8083 
                                 docker push  34.93.115.30:8083/springapp:$BUILD_ID
