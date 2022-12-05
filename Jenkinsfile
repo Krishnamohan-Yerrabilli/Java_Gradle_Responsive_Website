@@ -65,7 +65,7 @@ pipeline{
                 }
             }
 	    
-	    stage('manual approval'){
+	  stage('manual approval'){
             steps{
                 script{
                     timeout(10) {
@@ -75,7 +75,7 @@ pipeline{
                 }
             }
         }
-
+	    
         }
        post {
 		always {
