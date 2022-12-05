@@ -34,7 +34,7 @@ pipeline{
                                 docker rmi 34.93.115.30:8083/springapp:$BUILD_ID
                             '''
                         }
-                    }
+                    } 
                 }
             }
         
