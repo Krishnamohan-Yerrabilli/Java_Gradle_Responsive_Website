@@ -49,7 +49,7 @@ pipeline{
         }
     } 
 
-            stage("Pushing the helm charts to nexus"){
+            /* stage("Pushing the helm charts to nexus"){
             steps{
                 script{
                     withCredentials([string(credentialsId: 'docker_nexus_pass', variable: 'docker_nexus_passwd')]) {
@@ -64,6 +64,7 @@ pipeline{
                     }
                 }
             }
+	    */
 	    
 	  stage('manual approval'){
             steps{
