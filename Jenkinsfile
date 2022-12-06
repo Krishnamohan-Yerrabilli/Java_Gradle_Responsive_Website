@@ -38,7 +38,7 @@ pipeline{
                 }
             }
         
-            stage('identifying mis-configurations in helm charts using datree plugin'){
+        /* stage('identifying mis-configurations in helm charts using datree plugin'){
             steps{
                 script{
 
@@ -47,9 +47,9 @@ pipeline{
                     }
             }
         }
-    } 
+    } */
 
-            /* stage("Pushing the helm charts to nexus"){
+            stage("Pushing the helm charts to nexus"){
             steps{
                 script{
                     withCredentials([string(credentialsId: 'docker_nexus_pass', variable: 'docker_nexus_passwd')]) {
@@ -64,7 +64,7 @@ pipeline{
                     }
                 }
             }
-	    */
+	    
 	    
 	  stage('manual approval'){
             steps{
