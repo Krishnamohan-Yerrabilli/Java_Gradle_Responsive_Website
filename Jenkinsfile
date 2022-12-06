@@ -38,7 +38,7 @@ pipeline{
                 }
             }
         
-    /*    stage('identifying mis-configurations in helm charts using datree plugin'){
+            stage('identifying mis-configurations in helm charts using datree plugin'){
             steps{
                 script{
 
@@ -47,7 +47,7 @@ pipeline{
                     }
             }
         }
-    } */
+    } 
 
             stage("Pushing the helm charts to nexus"){
             steps{
@@ -70,7 +70,7 @@ pipeline{
                 script{
                     timeout(10) {
                         mail bcc: '', body: "<br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> Go to build url and approve the deployment request <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "${currentBuild.result} CI: Project name -> ${env.JOB_NAME}", to: "mailtomohanse@gmail.com";  
-                        input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
+                        input(id: "", message: "Deploy ${params.project_name}?", ok: 'Deploy')
                     }
                 }
             }
